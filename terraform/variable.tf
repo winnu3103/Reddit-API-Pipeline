@@ -13,5 +13,5 @@ variable "s3_bucket" {
 variable "aws_region" {
   description = "Region for AWS"
   type        = string
-  default     = ""
+  default     = "us-east-1"
 }
