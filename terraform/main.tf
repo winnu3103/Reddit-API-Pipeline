@@ -65,14 +65,12 @@ resource "aws_iam_role" "redshift_role" {
 }
 
 # Create S3 bucket
-resource "aws_s3_bucket" "reddit_bucket" {
+
+resource "aws_s3_bucket" "s3_reddit_bucket" {
   bucket = var.s3_bucket
+  acl    = "private"
   force_destroy = true # will delete contents of bucket when we run terraform destroy
+  # Add other bucket configuration as needed
 }
 
-# Set access control of bucket to private
-resource "aws_s3_bucket_acl" "s3_reddit_bucket_acl" {
-  bucket = aws_s3_bucket.reddit_bucket.id
-  acl    = "private"
-}
       

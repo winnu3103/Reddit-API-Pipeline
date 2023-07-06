@@ -45,7 +45,7 @@ def download_redshift_data(rs_conn):
         result = cur.fetchall()
         headers = [col[0] for col in cur.description]
         result.insert(0, tuple(headers))
-        fp = open("/tmp/redshift_output.csv", "w")
+        fp = open(r"tmp\redshift_output.csv", "w")
         myFile = csv.writer(fp)
         myFile.writerows(result)
         fp.close()

@@ -65,7 +65,7 @@ def create_bucket_if_not_exists(conn):
 def upload_file_to_s3(conn):
     """Upload file to S3 Bucket"""
     conn.meta.client.upload_file(
-        Filename="/tmp/" + FILENAME, Bucket=BUCKET_NAME, Key=KEY
+        Filename=FILENAME, Bucket=BUCKET_NAME, Key=KEY
     )
 
 

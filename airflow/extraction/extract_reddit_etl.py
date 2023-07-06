@@ -135,7 +135,7 @@ def transform_basic(df):
 
 def load_to_csv(extracted_data_df):
     """Save extracted data to CSV file in /tmp folder"""
-    extracted_data_df.to_csv(f"/tmp/{output_name}.csv", index=False)
+    extracted_data_df.to_csv(f"{output_name}.csv", index=False)
 
 
 if __name__ == "__main__":
