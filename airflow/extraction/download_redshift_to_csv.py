@@ -8,7 +8,7 @@ import sys
 """
 Download Redshift table to CSV file. Will be stored under /tmp folder.
 """
-
+ 
 # Parse configuration file
 script_path = pathlib.Path(__file__).parent.resolve()
 parser = configparser.ConfigParser()
