@@ -4,7 +4,7 @@ import psycopg2
 from psycopg2 import sql
 import csv
 import sys
-
+ 
 """
 Download Redshift table to CSV file. Will be stored under /tmp folder.
 """
